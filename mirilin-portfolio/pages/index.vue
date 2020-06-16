@@ -8,6 +8,8 @@
       <h2 class="subtitle">
         My prime Nuxt.js project
       </h2>
+      <nuxt-link to="/web">Webのお仕事</nuxt-link>
+      <nuxt-link to="/other">その他お仕事・活動</nuxt-link>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">
           Documentation
