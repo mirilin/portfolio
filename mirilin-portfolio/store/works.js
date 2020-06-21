@@ -1,4 +1,4 @@
-import works from '@/assets/json/works.json'
+import works from '@/assets/json/works.example.json'
 
 export const state = () => ({
   works

@@ -2,7 +2,7 @@
   .page-other
     .page-other_inner
       h1.page-other_title Other Works
-      OtherWorks
+      //- OtherWorks
       ToTopButton
 </template>
 
