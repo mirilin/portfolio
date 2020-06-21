@@ -1,70 +1,69 @@
-<template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        mirilin-portfolio
-      </h1>
-      <h2 class="subtitle">
-        My prime Nuxt.js project
-      </h2>
-      <nuxt-link to="/web">Webのお仕事</nuxt-link>
-      <nuxt-link to="/other">その他お仕事・活動</nuxt-link>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+  .page-top
+    .page-top_inner
+      h1.page-top_title Misaki Yoshitake
+      h2.page-top_subtitle Works
+      .page-top_nav
+        NuxtLink(to="/web").page-top_link Web
+        NuxtLink(to="/other").page-top_link Other
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
-</script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
+<style lang="scss" scoped>
+.page-top {
+  height: calc(100vh - 76px);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  &_inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+  }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+  &_title,
+  &_subtitle,
+  &_nav {
+    font-family: 'Courier New', serif;
+  }
 
-.links {
-  padding-top: 15px;
+  &_title {
+    font-size: 48px;
+  }
+
+  &_subtitle {
+    margin-top: 40px;
+    font-size: 36px;
+  }
+
+  &_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 24px;
+  }
+
+  &_link {
+    position: relative;
+    margin: 0 20px;
+
+    &:hover {
+      color: $color-grey;
+    }
+
+    & + &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -20px;
+      width: 1px;
+      height: 100%;
+      background-color: $color-grey;
+    }
+  }
 }
 </style>

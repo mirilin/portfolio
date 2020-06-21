@@ -7,26 +7,20 @@
       .category-list_item(@click="setCategory('coding')") Coding
       .category-list_item(@click="setCategory('design')") Design
       .category-list_item(@click="setCategory('direction')") Direction
-    WorkItem(
-      v-for="item in works",
-      :key="item.id",
-      :item="item",
-      :category="category"
-    )
+    WorkList(:category="category")
     NuxtLink(to="/") TOPへ
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import WorkItem from '@/components/WorkItem.vue'
+import WorkList from '@/components/WorkList.vue'
 
 export default {
   components: {
-    WorkItem
+    WorkList
   },
   computed: {
     ...mapGetters({
-      works: 'works/getWorks',
       category: 'category/geCategory'
     })
   },

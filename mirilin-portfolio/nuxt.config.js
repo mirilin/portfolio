@@ -24,6 +24,7 @@ export default {
    ** Global CSS
    */
   css: [
+    'destyle.css',
     { src: '@/assets/sass/common.scss', lang: 'scss' }
   ],
   /*
@@ -44,8 +45,14 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/style-resources',
   ],
+  styleResources: {
+    scss: [
+      '@/assets/sass/_variables.scss'
+    ]
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
