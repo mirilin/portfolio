@@ -1,11 +1,10 @@
 <template lang="pug">
-  TransitionGroup(name="work-list", tag="ul")
+  TransitionGroup(name="work-list", tag="ul").work-list
     WorkItem(
       v-for="item in works",
       v-if="category === 'all' || item.tags.includes(category)",
       :key="item.id",
-      :item="item",
-      :category="category"
+      :item="item"
     ).work-list_item
 </template>
 
@@ -33,6 +32,10 @@ export default {
 
 <style lang="scss" scoped>
 .work-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
   &-enter-active,
   &-leave-active {
     transition: opacity 0.5s;
@@ -53,7 +56,14 @@ export default {
   }
 
   &_item {
+    flex: 0 1 calc(50% - 20px);
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
     transition: 0.5s;
+
+    &:nth-child(2n) {
+      margin-left: 40px;
+    }
   }
 }
 </style>

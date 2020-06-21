@@ -16,12 +16,6 @@
   align-items: center;
   text-align: center;
 
-  &_inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 4%;
-  }
-
   &_title,
   &_subtitle,
   &_nav {
