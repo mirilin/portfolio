@@ -59,10 +59,7 @@ export default {
     padding: 5px 10px;
     border: 1px solid $color-grey;
     cursor: pointer;
-
-    & + & {
-      margin-left: 20px;
-    }
+    margin-right: 20px;
   }
 
   &_category.-current {
@@ -71,6 +68,20 @@ export default {
 
   &_works {
     margin-top: 20px;
+  }
+
+  @media (--sp) {
+    &_title {
+      margin-bottom: 30px;
+    }
+
+    &_categories {
+      flex-wrap: wrap;
+    }
+
+    &_category {
+      margin-top: 10px;
+    }
   }
 }
 </style>

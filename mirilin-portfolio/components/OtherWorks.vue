@@ -96,5 +96,11 @@
   &_description {
     margin-bottom: 40px;
   }
+
+  @media (--sp) {
+    &_item {
+      padding: 20px;
+    }
+  }
 }
 </style>

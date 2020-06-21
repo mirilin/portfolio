@@ -51,5 +51,19 @@
       }
     }
   }
+
+  @media (--sp) {
+    &_title {
+      font-size: 18px;
+    }
+
+    &_link {
+      font-size: 16px;
+
+      & + & {
+        margin-left: 20px;
+      }
+    }
+  }
 }
 </style>

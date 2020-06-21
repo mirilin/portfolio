@@ -65,5 +65,17 @@ export default {
       margin-left: 40px;
     }
   }
+
+  @media (--sp) {
+    display: block;
+
+    &_item {
+      width: 100%;
+
+      &:nth-child(2n) {
+        margin-left: 0;
+      }
+    }
+  }
 }
 </style>

@@ -64,6 +64,17 @@ export default {
    ** Build configuration
    */
   build: {
+    postcss: {
+      plugins: {
+        'postcss-custom-media': {
+          importFrom: {
+            customMedia: {
+              '--sp': 'screen and (max-width: 767px)'
+            }
+          }
+        }
+      }
+    },
     /*
      ** You can extend webpack config here
      */

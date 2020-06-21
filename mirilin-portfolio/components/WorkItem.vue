@@ -81,5 +81,9 @@ export default {
   &_description {
     margin-top: 20px;
   }
+
+  @media (--sp) {
+    padding: 20px;
+  }
 }
 </style>
