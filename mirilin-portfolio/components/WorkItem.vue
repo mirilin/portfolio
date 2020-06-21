@@ -80,6 +80,7 @@ export default {
 
   &_description {
     margin-top: 20px;
+    white-space: pre-wrap;
   }
 
   @media (--sp) {
