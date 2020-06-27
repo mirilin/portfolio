@@ -3,7 +3,8 @@
     h2.work-item_title {{ item.name }}
     .work-item_tags
       .work-item_tag(v-for="tag in item.tags") {{ tag }}
-    a.work-item_link(v-for="url in item.url" :href="url", target="_blank") {{ url }}
+    .work-item_url(v-for="url in item.url")
+      a.work-item_link(:href="url", target="_blank") {{ url }}
     .work-item_images
       .work-item_inner(v-for="image in item.images")
         img(:src="image", :alt="item.name").work-item_image
@@ -45,6 +46,12 @@ export default {
 
     & + & {
       margin-left: 5px;
+    }
+  }
+
+  &_url {
+    & + & {
+      margin-top: 5px;
     }
   }
 

@@ -75,7 +75,7 @@
   &_image {
     flex: 0 1 calc(50% - 10px);
     width: calc(50% - 10px);
-    height: auto;
+    height: 100%;
     margin-bottom: 20px;
 
     &:nth-child(2n) {
